@@ -1,11 +1,11 @@
 export default function Home() {
   return (
-    <div className="w-full h-full absolute">
+    <div className="w-full h-full  absolute">
       <video
         autoPlay
         muted
         loop
-        className=" object-cover h-full w-full"
+        className=" object-cover h-full w-full "
       >
         <source
           src="/blackhole.webm"
