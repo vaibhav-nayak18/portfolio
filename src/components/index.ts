@@ -1,3 +1,2 @@
-import Navbar from './navbar';
-import Background from './backgroud';
-export { Navbar, Background };
+import Header from "./header";
+export { Header };
