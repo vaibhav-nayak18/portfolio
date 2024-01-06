@@ -1,2 +1,6 @@
+import Contact from "./contact";
 import Header from "./header";
-export { Header };
+import Profile from "./profile";
+import ToggleButton from "./toggle-btn";
+
+export { Contact, Header, Profile, ToggleButton };
