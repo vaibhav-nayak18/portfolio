@@ -1,9 +1,14 @@
-import { Header } from "@/components";
+"use client";
+import { Contact, Profile } from "@/components";
+import Projects from "@/components/projects";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className=" max-w-5xl mx-auto ">
-      <Header />
-    </main>
+    <motion.main className=" max-w-5xl mx-auto ">
+      <Profile />
+      <Projects />
+      <Contact />
+    </motion.main>
   );
 }
