@@ -35,7 +35,7 @@ export default function Header() {
         variants={navVariants}
         initial={"hidden"}
         whileInView={"show"}
-        className="fixed top-2 left-1/2   border
+        className="fixed z-50 top-2 left-1/2   border
         border-white shadow-2xl backdrop-blur-[0.5rem] 
         shadow-gray-700  -translate-x-1/2 mt-2 md:mt-4
           rounded-3xl py-2 px-4  justify-between"
@@ -72,8 +72,8 @@ export default function Header() {
         className="fixed flex gap-4 right-6 bottom-6"
       >
         <span
-          className=" bg-gray-200 w-10 h-10 rounded-full cursor-pointer
-              flex items-center justify-center"
+          className="bg-gray-200 w-10 h-10 rounded-full cursor-pointer
+                     flex items-center justify-center"
         >
           <FaGithub className={"text-2xl md:text-3xl text-black"} />
         </span>
