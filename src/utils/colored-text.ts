@@ -1,6 +1,6 @@
 import cx from "./cx";
 
-type Color =
+export type Color =
   | "brand"
   | "blue"
   | "green"
@@ -10,35 +10,22 @@ type Color =
   | "purple";
 
 export const getColoredTextClasses = (
-  shadow?: Color,
   from?: Color,
   to?: Color,
-  otherClasses?: string,
-  includeLightTheme?: boolean
+  otherClasses?: string
 ): string => {
-  const gradientPrefix = includeLightTheme ? "" : "dark:";
   const classes = [];
-  if (shadow && !includeLightTheme) {
-    classes.push(
-      cx("text-shadow", `shadow-${shadow}-300`, "dark:text-shadow-none")
-    );
-  }
 
   if (from || to) {
     classes.push(
-      cx(
-        "dark:saturate-150",
-        `${gradientPrefix}bg-gradient-to-r`,
-        `${gradientPrefix}bg-clip-text`,
-        `${gradientPrefix}text-transparent`
-      )
+      cx("saturate-150", `bg-gradient-to-r`, `bg-clip-text`, `text-transparent`)
     );
   }
 
-  return [
+  const res = [
     cx(classes, otherClasses),
-    `from-${from}`,
-    `to-${to}`,
-    "gradient",
+    `from-${from}-600`,
+    `to-${to}-700`,
   ].join(" ");
+  return res;
 };
