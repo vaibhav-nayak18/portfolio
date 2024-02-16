@@ -32,7 +32,6 @@ const config: Config = {
     purple: twColors.violet,
   },
   theme: {
-    fontSize,
     extend: {
       colors: {
         brand: {

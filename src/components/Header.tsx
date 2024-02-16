@@ -2,23 +2,33 @@
 import { Color, getColoredTextClasses } from "@/utils/colored-text";
 import Link from "next/link";
 
-const links: { title: string; from: Color; to: Color }[] = [
+const links: { title: string; herf: string; from: Color; to: Color }[] = [
+  {
+    title: "Home",
+    herf: "",
+    from: "orange",
+    to: "red",
+  },
   {
     title: "About",
+    herf: "about",
     from: "blue",
     to: "green",
   },
   {
     title: "Skills",
+    herf: "skills",
     from: "orange",
     to: "yellow",
   },
   {
     title: "Projects",
+    herf: "projects",
     from: "red",
     to: "purple",
   },
 ];
+
 export default function Header() {
   return (
     <header
@@ -30,7 +40,7 @@ export default function Header() {
         className={getColoredTextClasses(
           "blue",
           "brand",
-          "saturate-125 bg-brand-500"
+          "saturate-125 text-brand-400"
         )}
       >
         Vaibhav Nayak
@@ -38,10 +48,10 @@ export default function Header() {
       <ul className="hidden sm:flex gap-4 lg:gap-7 ">
         {links.map((val) => (
           <Link
-            href={"#" + val.title.toLowerCase()}
+            href={"#" + val.herf}
             key={val.title}
             className={
-              "py-1 px-2 rounded-md bg-[#8f9fc414] hover:text-gray-50 saturate-125 transition duration-200"
+              "py-1 px-2 rounded-md hover:bg-[#8f9fc414] hover:text-gray-50 saturate-125 transition duration-200"
             }
           >
             {val.title}
