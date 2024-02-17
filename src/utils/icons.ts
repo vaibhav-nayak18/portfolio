@@ -1,6 +1,6 @@
 interface Skill {
-  name: string;
   color: string;
+  name: string;
   icon: string;
   hide?: boolean;
 }

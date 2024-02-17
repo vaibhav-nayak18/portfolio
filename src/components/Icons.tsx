@@ -28,7 +28,8 @@ export default function Icons() {
       {iconsList.map((val) => (
         <Link
           key={val.name}
-          className={`text-2xl p-1 rounded-lg transition-all duration-200 hover:bg-[#2e7393] `}
+          className={`text-2xl p-1 rounded-lg transition-all duration-200
+           hover:bg-[#2e7393]/30 `}
           href={val.ref}
         >
           {val.icon}

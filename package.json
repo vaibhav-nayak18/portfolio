@@ -15,7 +15,8 @@
     "react-dom": "^18",
     "react-icons": "^5.0.1",
     "react-twc": "^1.4.1",
-    "tailwind-merge": "^2.2.1"
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-hocus": "^0.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
