@@ -5,7 +5,7 @@ export default function About() {
     <section className="flex items-center justify-between" id={"about"}>
       <div className="text-start leading-6 ">
         <span className="text-2xl md:text-4xl font-extrabold">
-          Hello, I'm Vaibhav
+          Hello, I&lsquo;m Vaibhav
         </span>
         <p className="text-xl md:text-2xl my-6 md:my-6 max-w-xl">
           Passionate full-stack developer from Bengaluru, India.

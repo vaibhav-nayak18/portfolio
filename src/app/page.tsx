@@ -6,9 +6,7 @@ import Skills from "@/components/Skills";
 export default function Home() {
   return (
     <main className="max-w-5xl mx-auto px-5 flex flex-col gap-10 md:gap-12 relative">
-      <div className="relative">
-        <Header />
-      </div>
+      <Header />
       <About />
       <Skills />
       <Projects />

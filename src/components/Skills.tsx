@@ -1,7 +1,23 @@
+"use client";
+import { hexToRgb } from "@/utils/color";
 import { skills } from "@/utils/icons";
-import { cx } from "react-twc";
-import { Icon } from "./Icon";
+import { FaDocker } from "react-icons/fa";
+import { FaGolang } from "react-icons/fa6";
+import Icon from "./ui/icon";
+import Skill from "./ui/skill";
 
+const extraSkill = [
+  {
+    name: "Docker",
+    icon: <FaDocker />,
+    color: "blue",
+  },
+  {
+    name: "Golang",
+    icon: <FaGolang />,
+    color: "lightblue",
+  },
+];
 export default function Skills() {
   return (
     <section id="skills" className="pb-6">
@@ -16,24 +32,25 @@ export default function Skills() {
         {skills
           .filter((skill) => !skill.hide)
           .map((skill) => {
+            const color = hexToRgb(skill.color, 40);
             return (
               <li className={"block"} key={skill.name}>
-                <span
-                  className={cx(
-                    "flex items-center gap-1.5",
-                    "rounded-2xl pl-3 pr-3.5 py-1.5 min-h-9",
-                    "text-xl font-medium cursor-default",
-                    "bg-brand-700/10",
-                    "cursor-pointer transition-all hover:scale-105 duration-200",
-                    "hover:bg-orange-500/10"
-                  )}
-                >
+                <Skill style={{ backgroundColor: color?.toString() }}>
                   <Icon path={skill.icon} className={"size-4"} />
                   <span>{skill.name}</span>
-                </span>
+                </Skill>
               </li>
             );
           })}
+        {extraSkill.map((val) => (
+          <Skill
+            key={val.name}
+            style={{ backgroundColor: "rgba(53 114 181 / 5)" }}
+            {...val}
+          >
+            {val.icon} {val.name}
+          </Skill>
+        ))}
       </ul>
     </section>
   );
