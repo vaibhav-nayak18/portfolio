@@ -1,3 +1,7 @@
 export default function Projects() {
-  return <div>Projects</div>;
+  return (
+    <section className="h-screen" id="projects">
+      Projects
+    </section>
+  );
 }

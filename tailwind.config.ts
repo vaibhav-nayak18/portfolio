@@ -1,16 +1,4 @@
 import type { Config } from "tailwindcss";
-import twColors from "tailwindcss/colors";
-
-const fontSize = {
-  "2xl": "1.5625rem", // h1
-  xl: "1.375rem", // h2
-  lg: "1.25rem", // h3
-  md: "1.125rem", // h4
-  // h5: 1rem (defined in css)
-  xs: "0.9375rem", // h6, body, p
-  "2xs": "0.875rem", // small
-  "3xs": "0.8125rem", // (?)
-};
 
 const config: Config = {
   content: [
@@ -18,19 +6,6 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  colors: {
-    transparent: "rgba(0,0,0,0)",
-    current: "currentColor",
-    inherit: "inherit",
-    black: twColors.black,
-    white: twColors.white,
-    blue: twColors.sky,
-    green: twColors.green,
-    yellow: twColors.yellow,
-    orange: twColors.orange,
-    red: twColors.rose,
-    purple: twColors.violet,
-  },
   theme: {
     extend: {
       colors: {

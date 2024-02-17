@@ -4,12 +4,6 @@ import Link from "next/link";
 
 const links: { title: string; herf: string; from: Color; to: Color }[] = [
   {
-    title: "Home",
-    herf: "",
-    from: "orange",
-    to: "red",
-  },
-  {
     title: "About",
     herf: "about",
     from: "blue",
@@ -50,9 +44,11 @@ export default function Header() {
           <Link
             href={"#" + val.herf}
             key={val.title}
-            className={
+            className={getColoredTextClasses(
+              val.from,
+              val.to,
               "py-1 px-2 rounded-md hover:bg-[#8f9fc414] hover:text-gray-50 saturate-125 transition duration-200"
-            }
+            )}
           >
             {val.title}
           </Link>
