@@ -46,7 +46,7 @@ const projects: ProjectType[] = [
 ];
 export default function Projects() {
   return (
-    <section className="p-8" id="projects">
+    <section className="p-2" id="projects">
       <h1 className="text-3xl mb-4 lg:mb-7 lg:text-5xl font-bold text-cyan-500 text-center">
         Projects
       </h1>
