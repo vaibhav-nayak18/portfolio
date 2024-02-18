@@ -1,8 +1,14 @@
 import Project from "./ui/project";
 
-const projects = [
+export type ProjectType = {
+  title: string;
+  tech: string[];
+  desc: string;
+  link: { code: string; live: string };
+};
+const projects: ProjectType[] = [
   {
-    name: "full stack chat app",
+    title: "full stack chat app",
     tech: [
       "react",
       "redux-toolkit",
@@ -14,27 +20,39 @@ const projects = [
       "docker",
     ],
     desc: "",
+    link: {
+      code: "",
+      live: "",
+    },
   },
   {
-    name: "full stack social app",
+    title: "full stack social app",
     tech: ["Next js", "typescript", "Go", "fiber", "mongodb", "docker"],
     desc: "",
+    link: {
+      code: "",
+      live: "",
+    },
   },
   {
-    name: "Entertainment Hub",
+    title: "Entertainment Hub",
     tech: ["react", "redux-toolkit", "typescript"],
     desc: "",
+    link: {
+      code: "",
+      live: "",
+    },
   },
 ];
 export default function Projects() {
   return (
-    <section className="pb-6" id="projects">
-      <h1 className="text-3xl lg:text-5xl font-bold text-cyan-500 text-center">
+    <section className="p-8" id="projects">
+      <h1 className="text-3xl mb-4 lg:mb-7 lg:text-5xl font-bold text-cyan-500 text-center">
         Projects
       </h1>
-      <div className="">
+      <div className="flex flex-col gap-8 lg:gap-14 items-center">
         {projects.map((val) => (
-          <Project key={val.name} />
+          <Project key={val.title} {...val} />
         ))}
       </div>
     </section>

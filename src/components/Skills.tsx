@@ -1,4 +1,3 @@
-"use client";
 import { hexToRgb } from "@/utils/color";
 import { skills } from "@/utils/icons";
 import { FaDocker } from "react-icons/fa";

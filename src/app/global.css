@@ -8,7 +8,9 @@
 
 body {
   background: #0c121e;
-  color: rgba(232, 237, 246, 0.85);
+  color: rgba(195, 211, 237, 0.85);
   font-weight: 500;
   scroll-behavior: smooth;
 }
+ 
+/* rgba(232, 237, 246, 0.85);*/
