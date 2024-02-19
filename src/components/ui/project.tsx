@@ -1,3 +1,4 @@
+"use client";
 type Props = {
   title: string;
   desc: string;
@@ -6,14 +7,20 @@ type Props = {
     code: string;
     live: string;
   };
+  index: number;
 };
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./button";
-export default function Project({ title, desc, link, tech }: Props) {
+
+export default function Project({ title, index, desc, link, tech }: Props) {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: -60 * index }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.3 * index, ease: "easeInOut" }}
       className="flex flex-col items-center lg:flex-row
               lg:justify-between gap-2 lg:gap-8 bg-brand-950 p-4 rounded-2xl"
     >
@@ -47,6 +54,6 @@ export default function Project({ title, desc, link, tech }: Props) {
           </Button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

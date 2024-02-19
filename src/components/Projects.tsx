@@ -51,8 +51,8 @@ export default function Projects() {
         Projects
       </h1>
       <div className="flex flex-col gap-8 lg:gap-14 items-center">
-        {projects.map((val) => (
-          <Project key={val.title} {...val} />
+        {projects.map((val, i) => (
+          <Project key={val.title} {...val} index={i + 1} />
         ))}
       </div>
     </section>

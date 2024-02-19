@@ -1,5 +1,7 @@
+"use client";
 import { hexToRgb } from "@/utils/color";
 import { skills } from "@/utils/icons";
+import { motion } from "framer-motion";
 import { FaDocker } from "react-icons/fa";
 import { FaGolang } from "react-icons/fa6";
 import Icon from "./ui/icon";
@@ -19,7 +21,16 @@ const extraSkill = [
 ];
 export default function Skills() {
   return (
-    <section id="skills" className="pb-6">
+    <motion.section
+      initial={{ opacity: 0, scale: 0.5 }}
+      whileInView={{ opacity: 1, scale: [0.7, 1.02, 1] }}
+      transition={{
+        duration: 0.5,
+        ease: "easeInOut",
+      }}
+      id="skills"
+      className="pb-6"
+    >
       <h1
         className={
           "saturate-125 text-brand-500 my-6 text-4xl font-bold text-center"
@@ -51,6 +62,6 @@ export default function Skills() {
           </Skill>
         ))}
       </ul>
-    </section>
+    </motion.section>
   );
 }
