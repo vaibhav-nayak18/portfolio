@@ -10,6 +10,7 @@ export default function Home() {
       <About />
       <Skills />
       <Projects />
+      <div className="h-20"></div>
     </main>
   );
 }

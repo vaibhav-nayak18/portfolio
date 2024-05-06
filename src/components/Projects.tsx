@@ -2,13 +2,15 @@ import Project from "./ui/project";
 
 export type ProjectType = {
   title: string;
+  img: string;
   tech: string[];
   desc: string;
-  link: { code: string; live: string };
+  link: { code: string; live: string; demo: string };
 };
 const projects: ProjectType[] = [
   {
     title: "full stack chat app",
+    img: "https://utfs.io/f/0c5ad0ee-69e8-401e-be38-349496f7787c-v9ywyf.png",
     tech: [
       "react",
       "redux-toolkit",
@@ -19,28 +21,46 @@ const projects: ProjectType[] = [
       "mongodb",
       "docker",
     ],
-    desc: "",
+
+    desc: `
+    Developed a web application with React for the user interface, 
+    Redux Toolkit for state management, React Query for data fetching,
+    TypeScript for code readability, Node.js and Express.js for the backend,
+    MongoDB for database storage, and Docker for deployment.`,
+
     link: {
-      code: "",
-      live: "",
+      code: "https://github.com/vaibhavm18/Chat-Webapp",
+      live: "https://chatclient.vaibhavnayak.com",
+      demo: "https://youtu.be/sfP9lZDLYIQ",
     },
   },
   {
     title: "full stack social app",
-    tech: ["Next js", "typescript", "Go", "fiber", "mongodb", "docker"],
-    desc: "",
+    img: "https://utfs.io/f/3857cc08-f88d-4496-acd6-2f416ec4e557-tzitf7.png",
+    tech: [
+      "React js",
+      "typescript",
+      "Go",
+      "fiber",
+      "mongodb",
+      "docker",
+      "Zustand",
+    ],
+    desc: `
+    Built a full-stack social knowledge-sharing application allowing users to post topics, briefs, and engage with
+    like/dislike functionality.
+    Developed a web application utilizing React for the user interface,
+    TypeScript for enhanced developer experience and type safety, 
+    Go and Fiber for creating efficient and scalable backend APIs,
+    MongoDB for data storage and management,
+    Docker for containerization to ensure consistent deployment across environments, and Zustand for simplified state management,
+    handling complex application state. 
+    
+    `,
     link: {
-      code: "",
-      live: "",
-    },
-  },
-  {
-    title: "Entertainment Hub",
-    tech: ["react", "redux-toolkit", "typescript"],
-    desc: "",
-    link: {
-      code: "",
-      live: "",
+      code: "https://github.com/vaibhavm18/Social-App",
+      live: "https://socials.vaibhavnayak.com/",
+      demo: "https://youtu.be/jk93Tbs6Fbg",
     },
   },
 ];

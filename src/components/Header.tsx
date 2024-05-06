@@ -45,9 +45,10 @@ export default function Header() {
           </Link>
         ))}
         <Link
-          href={""}
+          href={"https://github.com/vaibhavm18"}
           className=" text-xl hover:bg-brand-600/20 transition-all duration-250
            px-[6px] py-1 rounded-xl"
+          target="_blank"
         >
           <FaGithub />
         </Link>
