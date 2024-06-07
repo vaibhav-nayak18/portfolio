@@ -51,22 +51,16 @@ export default function Project({
             </span>
           ))}
         </div>
-        <div className=" flex items-center justify-center gap-8">
-          <Button>
-            <Link href={link.code} target="_blank">
-              Code
-            </Link>
-          </Button>
-          <Button>
-            <Link href={link.live} target="_blank">
-              Live
-            </Link>
-          </Button>
-          <Button>
-            <Link href={link.demo} target="_blank">
-              Dome
-            </Link>
-          </Button>
+        <div className="flex items-center justify-center gap-8">
+          <Link href={link.code} target="_blank">
+            <Button>Code</Button>
+          </Link>
+          <Link href={link.live} target="_blank">
+            <Button>Live</Button>
+          </Link>
+          <Link href={link.demo} target="_blank">
+            <Button>Demo</Button>
+          </Link>
         </div>
       </div>
     </motion.div>
